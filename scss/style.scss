@@ -1,0 +1,131 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass";
+@import "settings";
+@import "foundation";
+@import "variables";
+
+.page-header {
+	@include single-text-shadow;
+	margin: 20px 10px;
+	float: left;
+	a {
+		color: #666;
+		&:hover {
+			color: #a0a0a0;
+		}
+	}
+}
+
+header {
+	border-bottom: 3px solid #FFBF9E;
+	margin-bottom: 20px;
+}
+
+.nav {
+	float: right;
+	list-style-type: none;
+	margin-top: 35px;
+	li {
+		float: left;
+		margin-right: 12px;
+		a {
+			color: #aaa;
+			&:hover {
+				color: #777;
+			}
+		}
+	}
+}
+
+.tab-bar {
+	margin-bottom: 200px;
+}
+
+footer {
+	padding-top: 10px;
+	text-align: center;
+	height: 35px;
+	color: #fff;
+	background: #ccc;
+	@include box-shadow(white 2px 2px 3px 2px inset);
+
+}
+
+/** Index **/ 
+
+.index {
+	background: radial-gradient(circle, rgba(0,0,0,.0), rgba(0,0,0,.8) 90%), url('../img/r0050524.jpg') no-repeat;
+	background-size: cover;
+}
+
+.index-header {
+	@include single-text-shadow;
+	color: #e0e0e0;
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+}
+.navigation {
+	@include box-shadow(#000 0 0 20px 5px inset);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: #333;
+	list-style-type: none;
+	margin: 0;
+	color: #aaa;
+	li {
+		float: right;
+		margin: 10px;
+		a {
+			color: #e0e0e0;
+			&:hover {
+				color: #ccc;
+			}
+		}
+		&:first-child {
+			margin-right: 20px;
+		}
+	}
+}
+/** Gallery **/
+
+h3 {
+	float: right;
+	color: #a0a0a0;
+}
+
+.orbit li img {
+	margin: 0 auto 300px auto;
+	width: 100%;
+}
+
+#last li img {
+	margin-bottom: 150px;
+}
+
+/** ClearFix **/
+
+.group:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+@media (min-width: 769px) {
+	.wrapper {
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 1030px) {
+	.nav {
+		margin-top: 0;
+		float: left;
+	}
+}

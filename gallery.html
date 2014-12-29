@@ -1,0 +1,132 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aiza Golledge Photography</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+        <nav class="tab-bar show-for-small">
+          <section class="left-small">
+            <a class="left-off-canvas-toggle menu-icon" aria-expanded="false"><span></span></a>
+          </section>
+          <section class="right tab-bar-section">
+            <h1 class="title">Aiza Golledge Photography</h1>
+          </section>
+        </nav>
+
+        <aside class="left-off-canvas-menu">
+          <ul class="off-canvas-list">
+            <li><label><a href="index.html">Aiza Golledge Photography</a></label></li>
+            <li><a href="#people">People &amp; Portraits</a></li>
+            <li><a href="#local">Around the Bay</a></li>
+            <li><a href="#nature">Nature</a></li>
+            <li><a href="#objects">Everyday Life</a></li>
+          </ul>
+        </aside>
+        <header class="hide-for-small group">
+          <h1 class="page-header"><a href="index.html">Aiza Golledge Photography</a></h1>
+          <ul class="nav">  
+            <li><a href="#people">People &amp; Portraits</a> | </li>
+            <li><a href="#local">Around the Bay</a> | </li>
+            <li><a href="#nature">Nature</a> | </li>
+            <li><a href="#objects">Everyday Life</a></li>
+          </ul>
+        </header>
+
+        <div class="wrapper">
+          <h3 id="people">People &amp; Portraits</h3>
+          <ul class="orbit" data-orbit>
+            <li>
+              <img src="img/r0000965.jpg" alt="slide 1" />
+            </li>
+            <li>
+              <img src="img/r0000977.jpg" alt="slide 2" />
+              </li>
+            <li>
+              <img src="img/r0000382.jpg" alt="slide 3" />
+            </li>
+            <li>
+              <img src="img/r0000457.jpg" alt="slide 4" />
+            </li>
+          </ul>
+
+          <h3 id="local">Life Around the Bay</h3>
+          <ul class="orbit" data-orbit>
+            <li>
+              <img src="img/r0000019.jpg" alt="slide 1" />
+            </li>
+            <li>
+              <img src="img/r0001038.jpg" alt="slide 2" />
+            </li>
+            <li>
+              <img src="img/r0001089.jpg" alt="slide 3" />
+            </li>
+            <li>
+              <img src="img/r0001121.jpg" alt="slide 3" />
+            </li>
+          </ul>
+
+          <h3 id="nature">Nature</h3>
+          <ul class="orbit" data-orbit>
+            <li>
+              <img src="img/r0000987.jpg" alt="slide 1" />
+            </li>
+            <li>
+              <img src="img/r0001125.jpg" alt="slide 2" />
+            </li>
+            <li>
+              <img src="img/r0006816.jpg" alt="slide 3" />
+            </li>
+            <li>
+              <img src="img/r0006856.jpg" alt="slide 3" />
+            </li>
+          </ul>
+
+          <h3 id="objects">Everyday Life</h3>
+          <ul class="orbit" id="last" data-orbit>
+            <li>
+              <img src="img/r0000206.jpg" alt="slide 1" />
+            </li>
+            <li>
+              <img src="img/r0000694.jpg" alt="slide 2" />
+            </li>
+            <li>
+              <img src="img/r0052933.jpg" alt="slide 3" />
+             </li>
+             <li>
+              <img src="img/r0052896.jpg" alt="slide 3" />
+            </li>
+          </ul>
+        </div>
+        <footer>
+          <p>&copy;2014 Aiza Golledge</p>
+        </footer>
+        <a class="exit-off-canvas"></a>
+      </div>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+    <script src="js/jquery.endless-scroll.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+        $(document).endlessScroll({
+          bottomPixels: 500,
+          fireDelay: 10,
+          callback: function(i) {
+            var last_img = $("#last");
+            last_img.after(last_img.prev().prev().prev().prev().prev().prev().clone());
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
